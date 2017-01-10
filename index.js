@@ -34,6 +34,9 @@ class PassThrough extends stream.PassThrough {
 exports.PassThrough = PassThrough;
 
 exports.wrap = function (stream) {
+  if (!stream._readableState) {
+    stream = new stream.Readable().wrap(stream);
+  }
   if (typeof stream[Symbol.asyncIterator] !== 'function') {
     stream[Symbol.asyncIterator] = function () {
       return new AsyncIter(this);
