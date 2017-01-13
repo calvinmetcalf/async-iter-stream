@@ -37,3 +37,7 @@ async function test() {
 test().then(()=>console.log('done'), e=>{console.log(e)});
 
 ```
+
+# Purpose
+
+There was tentative agreement at the most recent streams working group to include the `Symbol.asyncIterator` interface in node core streams when it is finalized by TC39 so feedback very welcome.  The corresponding ability for write to return a promise is a while different can of worms that you are free to discuss somewhere else.
