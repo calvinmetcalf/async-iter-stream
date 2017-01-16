@@ -26,6 +26,7 @@ const wrapAsyncIterator = (iterator, stream) =>{
       inProgress = false;
     })
   }
+  return stream;
 }
 
 const wrapIterator = (iterator, stream) =>{
@@ -45,6 +46,7 @@ const wrapIterator = (iterator, stream) =>{
       }
     }
   }
+  return stream;
 }
 
 module.exports = (iterator, stream) => {
