@@ -2,6 +2,7 @@
 
 const stream = require('stream');
 const AsyncIter = require('./asyncIter');
+const wrapIterator = require('./wrap-iterator');
 
 exports.Writable = stream.Writable;
 
