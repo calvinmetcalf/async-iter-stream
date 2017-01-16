@@ -9,6 +9,9 @@ class Readable extends stream.Readable {
   [Symbol.asyncIterator]() {
     return new AsyncIter(this);
   }
+  wrapIterator(iterator) {
+    return wrapIterator(iterator, this);
+  }
 }
 exports.Readable = Readable;
 
