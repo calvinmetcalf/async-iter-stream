@@ -2,12 +2,16 @@
 
 const stream = require('stream');
 const AsyncIter = require('./asyncIter');
+const wrapIterator = require('./wrap-iterator');
 
 exports.Writable = stream.Writable;
 
 class Readable extends stream.Readable {
   [Symbol.asyncIterator]() {
     return new AsyncIter(this);
+  }
+  wrapIterator(iterator) {
+    return wrapIterator(iterator, this);
   }
 }
 exports.Readable = Readable;
