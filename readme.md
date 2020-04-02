@@ -1,3 +1,5 @@
+# YOU DONT WANT THIS, STREAMS JUST WORK THIS WAY NOW!
+
 # async-iter-stream
 
 Contains a subclass of the various writable streams that include a `Symbol.asyncIterator` method in order to allow for async iteration.
